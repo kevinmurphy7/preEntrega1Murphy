@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Oswald:wght@300;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(161, 161, 161);
+}
+
+header {
+    background: red;
+    height: 100px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    height: 30px;
+}
+
+
+h1 {
+    color: rgb(249, 122, 122);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
