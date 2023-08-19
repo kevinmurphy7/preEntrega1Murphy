@@ -5,29 +5,104 @@
     box-sizing: border-box;
 }
 
-body {
-    background: rgb(161, 161, 161);
+.root {
+    height: 100vh;
 }
 
-header {
-    background: red;
-    height: 100px;
+.header {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    width: 100%;
+}
+
+.header .logo{
+    color: snow;
     text-decoration: none;
+}
+
+.header .nav-links li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 20px;
+    background-color: rgb(255, 135, 135);
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    color: azure;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .carrito {
+    cursor: pointer;
+}
+
+
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 3rem;
     color: black;
-    font-size: 15px;
+}
+
+.counter .controls{
+    display: flex;
+    align-items: center;
+}
+
+.value {
+    font-size: 3rem;
+    text-align: center;
+}
+
+button{
+    color: black;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: .8;
+}
+
+.count-button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    background-color: red;
+}
+
+.add-button {
+    font-size: 1.8rem;
+    background-color: rgb(196, 104, 104);
+    margin-left: 8px;
+}
+
+.CardItem{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
 }
 
-button {
-    height: 30px;
+.ItemImg {
+    height: 250px;
+    width: 250px;
 }
 
-
-h1 {
-    color: rgb(249, 122, 122);
-    font-size: 30px;
-    font-weight: bolder;
-    text-align: center;
+.CardItemDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    background-color: rgb(92, 92, 92);
 }

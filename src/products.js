@@ -1,0 +1,129 @@
+const products = [
+    {
+        id:'1',
+        name:'Camiseta titular',
+        price:27500,
+        img:'https://http2.mlstatic.com/D_NQ_NP_866232-MLA53707740636_022023-O.webp',
+        stock:8,
+        category:'camisetas',
+        description:'Camiseta titular oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'2',
+        name:'Camiseta suplente',
+        price:27500,
+        img:'https://http2.mlstatic.com/D_NQ_NP_857174-MLA53707915203_022023-O.webp',
+        stock:12,
+        category:'camisetas',
+        description:'Camiseta suplente oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'3',
+        name:'Camiseta alternativa',
+        price:27500,
+        img:'https://http2.mlstatic.com/D_NQ_NP_978642-MLA54969020430_042023-O.webp',
+        stock:7,
+        category:'camisetas',
+        description:'Camiseta alternativa oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'4',
+        name:'Camiseta entrenamiento',
+        price:27500,
+        img:'https://afaar.vtexassets.com/arquivos/ids/156139/Camiseta-Ruge-Estudiantes-De-La-Plata-2023-Hombre-Prematch-roja.jpg?v=638204549169930000',
+        stock:10,
+        category:'camisetas',
+        description:'Camiseta de entrenamiento oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'5',
+        name:'Jogging',
+        price:25600,
+        img:'https://http2.mlstatic.com/D_NQ_NP_2X_775237-MLA54816514299_042023-F.webp',
+        stock:9,
+        category:'pantalones',
+        description:'Jogging de entrenamiento rojo oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'6',
+        name:'Short titular',
+        price:15200,
+        img:'https://http2.mlstatic.com/D_NQ_NP_2X_646671-MLA70062916041_062023-F.webp',
+        stock:14,
+        category:'pantalones',
+        description:'Short negro oficial de Estudiantes de La Plata 2023 marca Ruge' 
+        },
+    {
+        id:'7',
+        name:'Short suplente',
+        price:15200,
+        img:'https://d2r9epyceweg5n.cloudfront.net/stores/001/949/148/products/img-20221213-wa00191-dea3e27c9e99c73c8a16766723395297-640-0.jpg',
+        stock:15,
+        category:'pantalones',
+        description:'Short blanco oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'8',
+        name:'Jogging tiempo libre',
+        price:24000,
+        img:'https://http2.mlstatic.com/D_NQ_NP_2X_904499-MLA69964374474_062023-F.webp',
+        stock:11,
+        category:'pantalones',
+        description:'Jogging gris oficial de Estudiantes de La Plata 2023 marca Ruge' 
+        },
+    {
+        id:'9',
+        name:'Rompevientos',
+        price:38500,
+        img:'https://http2.mlstatic.com/D_NQ_NP_717067-MLA54744271440_032023-O.webp',
+        stock:3,
+        category:'camperas',
+        description:'Rompevientos negro oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'10',
+        name:'Camperón',
+        price:58200,
+        img:'https://http2.mlstatic.com/D_NQ_NP_839854-MLA69456578558_052023-O.webp',
+        stock:4,
+        category:'camperas',
+        description:'Camperón negro oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+    {
+        id:'11',
+        name:'Campera liviana',
+        price:29900,
+        img:'https://http2.mlstatic.com/D_NQ_NP_2X_879201-MLA69803547160_062023-F.webp',
+        stock:6,
+        category:'camperas',
+        description:'Campera liviana roja oficial de Estudiantes de La Plata 2023 marca Ruge' 
+    },
+]
+
+export const getProducts = ()=>{
+    return new Promise ((resolve)=>{
+        setTimeout(()=>{
+            resolve(products)
+        },1000)
+    })
+}
+
+
+export const getProductById = (itemId)=>{
+    return new Promise ((resolve)=>{
+        setTimeout(()=>{
+            resolve(products.find(prod=>prod.id===itemId))
+        },1000)
+    })
+}
+
+export const getProductsByCategory = (categoryId)=>{
+    return new Promise ((resolve)=>{
+        setTimeout(()=>{
+            resolve(products.find(prod=>prod.category===categoryId))
+        },1000)
+    })
+}
+
+
+
