@@ -5,104 +5,187 @@
     box-sizing: border-box;
 }
 
-.root {
-    height: 100vh;
+:root {
+    --clr-main: #ef1f1f;
+    --clr-main-light: #ffffff;
+    object-fit: cover;
 }
 
-.header {
-    background-color: red;
+.container {
+    max-width: 1140px;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+}
+
+.main-title {
+    margin-top: 2rem;
+}
+
+.navbar {
+    padding: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
-    padding: 5px 10%;
-    width: 100%;
+    background-color: var(--clr-main);
 }
 
-.header .logo{
+.logo{
     color: snow;
     text-decoration: none;
 }
 
-.header .nav-links li{
-    list-style: none;
-    display: inline-block;
-    padding: 0 20px;
-    font-size: 20px;
-    background-color: rgb(255, 135, 135);
+.menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.menu-link {
     text-decoration: none;
-    cursor: pointer;
-    margin-right: 10px;
-    color: azure;
+    color: rgb(255, 253, 253);
+    font-size: 1.2rem;
+    margin-right: 20px; 
+    transition: transform 0.3s, color 0.3s;
 }
 
-.header .nav-links li:hover{
-    transform: scale(1.1);
+.menu-link:hover {
+    transform: scale(1.1); 
+    color: #47413f; 
+    cursor: pointer; 
 }
 
-.header .carrito {
-    cursor: pointer;
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-block: 2rem;
 }
 
-
-.counter{
+.producto {
     display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 3rem;
-    color: black;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-.counter .controls{
+.producto > div {
+    padding: 1rem;
+    background-color: var(--clr-main-light);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.value {
-    font-size: 3rem;
-    text-align: center;
+.producto > img {
+    width: 85%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
 }
 
-button{
-    color: black;
-    cursor: pointer;
+.producto .ver-mas {
+    text-decoration: none;
+    background-color: var(--clr-main);
+    color: rgb(34, 34, 34);
+    padding: .5rem;
+    width: max-content;
+    border-radius: .5rem;
+    transition: .2s;
 }
 
-button:hover{
-    opacity: .8;
+.producto .ver-mas:hover {
+    background-color: rgb(126, 125, 125);
+    color: rgb(255, 255, 255);
 }
 
-.count-button {
-    width: 3rem;
-    height: 3rem;
+.producto-detalle {
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.producto-detalle img {
+    width: 100%;
+}
+
+.producto-detalle-info h3 {
     font-size: 2rem;
-    background-color: red;
 }
 
-.add-button {
-    font-size: 1.8rem;
-    background-color: rgb(196, 104, 104);
-    margin-left: 8px;
+.categoria {
+    font-size: .8rem;
+    color: #424242;
+    margin-top: 1rem;
 }
 
-.CardItem{
+.precio {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 100;
+}
+
+.item-count {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin: 30px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.ItemImg {
-    height: 250px;
+.item-count button, .agregar-al-carrito, .enviar {
+    background-color: var(--clr-main);
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    color: rgb(44, 44, 44);
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    border: 2px solid var(--clr-main);
+    transition: .2s;
+}
+
+.item-count button:hover, .agregar-al-carrito:hover, .enviar:hover {
+    background-color: rgb(122, 121, 121);
+    color:rgb(253, 248, 248);
+}
+
+.agregar-al-carrito, .enviar {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.imagen-carrito{
     width: 250px;
+    padding: 10px;
+    border-radius: 1em;
 }
 
-.CardItemDetail {
+.formulario {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-    background-color: rgb(92, 92, 92);
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
 }
+
+.formulario input {
+    padding: .5rem;
+    width: 18rem;
+    border-radius: .5rem;
+    border: 2px solid black;
+}
+
+.formulario input:focus {
+    outline: 0;
+    border: 2px solid var(--clr-main);
+    outline: 2px solid var(--clr-main);
+}
+
+

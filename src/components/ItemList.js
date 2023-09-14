@@ -1,10 +1,14 @@
-import Item from './Item'
+import Item from "./Item";
 
-const ItemList = ({products})=>{
-    return(
-        <div className="ListGroup">
-            {products.map(prod=> <Item key={prod.id}{...prod}/>)}
+const ItemList = ( {productos, tipo} ) => {
+
+    return (
+    <div className="container">
+        <h2 className="main-title">{tipo} Nuestra indumentaria</h2>
+        <div className="productos">
+            { productos.map((prod) => <Item producto={prod} key={prod.id} />) }
         </div>
+    </div>
     )
 }
 
